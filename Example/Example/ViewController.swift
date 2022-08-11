@@ -16,11 +16,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = Colors.splashBackgroundColor.uiColor
+        view.backgroundColor = Colors.baseBackgroundColor.uiColor
         imageView.image = Images.loginHeaderIcon.uiImage
         
         imageView2.image = Images.email.uiImage
-        imageView2.tintColor = Colors.loginTextFieldForegroundColor.uiColor
+        imageView2.tintColor = Colors.baseTitle1ForegroundColor.uiColor
     }
 
 

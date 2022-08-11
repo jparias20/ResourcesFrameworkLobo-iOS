@@ -12,7 +12,7 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             
-            Colors.splashBackgroundColor
+            Colors.baseBackgroundColor
                 .color.edgesIgnoringSafeArea(.all)
             
             
@@ -25,7 +25,7 @@ struct ContentView: View {
                 Images.email.image
                     .resizable()
                     .frame(width: 100, height: 100)
-                    .foregroundColor(Colors.loginTextFieldForegroundColor.color)
+                    .foregroundColor(Colors.baseTitle1ForegroundColor.color)
                 
                 Images.password.image
                     .resizable()
