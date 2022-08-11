@@ -15,9 +15,23 @@ struct ContentView: View {
             Colors.splashBackgroundColor
                 .color.edgesIgnoringSafeArea(.all)
             
-            Images.loginHeaderIcon.image
-                .resizable()
-                .frame(width: 100, height: 100)
+            
+            
+            VStack {
+                Images.loginHeaderIcon.image
+                    .resizable()
+                    .frame(width: 100, height: 100)
+                
+                Images.email.image
+                    .resizable()
+                    .frame(width: 100, height: 100)
+                    .foregroundColor(Colors.loginTextFieldForegroundColor.color)
+                
+                Images.password.image
+                    .resizable()
+                    .frame(width: 100, height: 100)
+                    .foregroundColor(.white)
+            }
         }
         
     }

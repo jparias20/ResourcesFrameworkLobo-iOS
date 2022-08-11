@@ -16,23 +16,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hga-OY-u1Z">
-                                <rect key="frame" x="157" y="398" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="UBe-xr-LHH"/>
-                                    <constraint firstAttribute="height" constant="100" id="hr8-91-hZo"/>
-                                </constraints>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6B8-fV-dQC">
+                                <rect key="frame" x="157" y="343" width="100" height="210"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hga-OY-u1Z">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="UBe-xr-LHH"/>
+                                            <constraint firstAttribute="height" constant="100" id="hr8-91-hZo"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rag-4g-678">
+                                        <rect key="frame" x="0.0" y="110" width="100" height="100"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Hga-OY-u1Z" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FY8-Pr-PBz"/>
-                            <constraint firstItem="Hga-OY-u1Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fgz-U5-F7z"/>
+                            <constraint firstItem="6B8-fV-dQC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5cr-oh-Mn2"/>
+                            <constraint firstItem="6B8-fV-dQC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fyT-Zm-yrF"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="Hga-OY-u1Z" id="9fe-iO-yyJ"/>
+                        <outlet property="imageView2" destination="rag-4g-678" id="Kvs-1f-RKg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -11,10 +11,10 @@ public enum Images: String {
     case loginHeaderIcon
     
     public var uiImage: UIImage {
-        UIImage.getImage(named: rawValue)
+        UIImage(systemName: rawValue) ?? UIImage(named: rawValue, in: Utils.currentBundle, with: nil) ?? UIImage()
     }
     
     public var image: Image {
-        Image(uiImage: .getImage(named: rawValue))
+        UIImage.getImage(named: rawValue) == nil ? Image(systemName: rawValue) : Image(rawValue, bundle: Utils.currentBundle)
     }
 }

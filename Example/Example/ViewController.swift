@@ -11,12 +11,16 @@ import StyleFramework
 class ViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageView2: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = Colors.splashBackgroundColor.uiColor
         imageView.image = Images.loginHeaderIcon.uiImage
+        
+        imageView2.image = Images.email.uiImage
+        imageView2.tintColor = Colors.loginTextFieldForegroundColor.uiColor
     }
 
 
