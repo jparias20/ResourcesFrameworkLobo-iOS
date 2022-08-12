@@ -3,10 +3,13 @@ import SwiftUI
 
 public enum Images: String {
     
-    case email = "person.circle"
-    case password = "lock"
+    case email = "person"
+    case password = "key"
     case visible = "eye"
     case invisible = "eye.slash"
+    
+    case facebook
+    case google
     
     case loginHeaderIcon
     
