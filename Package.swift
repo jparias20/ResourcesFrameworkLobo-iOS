@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "StyleFramework",
+    defaultLocalization: "es",
     platforms: [
         .iOS(.v15)
     ],
@@ -20,8 +21,7 @@ let package = Package(
             dependencies: [],
             path: "Sources",
             resources: [
-                .process("Resources/Color.xcassets"),
-                .process("Resources/Images.xcassets")
+                .process("Resources")
             ]
         )
     ]

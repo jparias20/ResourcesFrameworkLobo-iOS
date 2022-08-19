@@ -1,0 +1,6 @@
+"emailPlaceholder" = "Ingresa tu correo";
+"passwordPlaceholder" = "Ingresa tu contraseña";
+"forgotPassword" = "Olvidaste tu contraseña?";
+"logIn" = "Iniciar Sesion";
+"loginDifferentMethods" = "-- Ó --";
+"loginFooterDescription" = "Si no tienes cuenta, se creará una nueva";

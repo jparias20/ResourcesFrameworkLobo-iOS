@@ -21,6 +21,8 @@ class ViewController: UIViewController {
         
         imageView2.image = Images.email.uiImage
         imageView2.tintColor = Colors.baseTitle1ForegroundColor.uiColor
+        
+        print(LanguageString.emailPlaceholder.localized)
     }
 
 
