@@ -13,7 +13,7 @@
 		D0DA02D228A595DE004A1106 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0DA02D028A595DE004A1106 /* Main.storyboard */; };
 		D0DA02D428A595DF004A1106 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0DA02D328A595DF004A1106 /* Assets.xcassets */; };
 		D0DA02D728A595DF004A1106 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0DA02D528A595DF004A1106 /* LaunchScreen.storyboard */; };
-		D0DA02E028A5A9F4004A1106 /* StyleFramework in Frameworks */ = {isa = PBXBuildFile; productRef = D0DA02DF28A5A9F4004A1106 /* StyleFramework */; };
+		D0E0BB0828B0014000D3A434 /* ResourcesFramework in Frameworks */ = {isa = PBXBuildFile; productRef = D0E0BB0728B0014000D3A434 /* ResourcesFramework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0DA02E028A5A9F4004A1106 /* StyleFramework in Frameworks */,
+				D0E0BB0828B0014000D3A434 /* ResourcesFramework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +94,7 @@
 			);
 			name = Example;
 			packageProductDependencies = (
-				D0DA02DF28A5A9F4004A1106 /* StyleFramework */,
+				D0E0BB0728B0014000D3A434 /* ResourcesFramework */,
 			);
 			productName = Example;
 			productReference = D0DA02C728A595DE004A1106 /* Example.app */;
@@ -376,9 +376,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D0DA02DF28A5A9F4004A1106 /* StyleFramework */ = {
+		D0E0BB0728B0014000D3A434 /* ResourcesFramework */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = StyleFramework;
+			productName = ResourcesFramework;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

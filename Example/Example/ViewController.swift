@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import StyleFramework
+import ResourcesFramework
 
 class ViewController: UIViewController {
 

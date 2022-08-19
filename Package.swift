@@ -4,20 +4,20 @@
 import PackageDescription
 
 let package = Package(
-    name: "StyleFramework",
+    name: "ResourcesFramework",
     defaultLocalization: "es",
     platforms: [
         .iOS(.v15)
     ],
     products: [
         .library(
-            name: "StyleFramework",
-            targets: ["StyleFramework"]),
+            name: "ResourcesFramework",
+            targets: ["ResourcesFramework"]),
     ],
     dependencies: [],
     targets: [
         .target(
-            name: "StyleFramework",
+            name: "ResourcesFramework",
             dependencies: [],
             path: "Sources",
             resources: [

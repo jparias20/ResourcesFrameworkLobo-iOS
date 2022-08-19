@@ -11,7 +11,7 @@
 		D0C0A10B28A5ADC100132832 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C0A10A28A5ADC100132832 /* ContentView.swift */; };
 		D0C0A10D28A5ADC200132832 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0C0A10C28A5ADC200132832 /* Assets.xcassets */; };
 		D0C0A11028A5ADC200132832 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0C0A10F28A5ADC200132832 /* Preview Assets.xcassets */; };
-		D0C0A11828A5ADCD00132832 /* StyleFramework in Frameworks */ = {isa = PBXBuildFile; productRef = D0C0A11728A5ADCD00132832 /* StyleFramework */; };
+		D0E0BB0A28B0014900D3A434 /* ResourcesFramework in Frameworks */ = {isa = PBXBuildFile; productRef = D0E0BB0928B0014900D3A434 /* ResourcesFramework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0C0A11828A5ADCD00132832 /* StyleFramework in Frameworks */,
+				D0E0BB0A28B0014900D3A434 /* ResourcesFramework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +94,7 @@
 			);
 			name = ExampleUI;
 			packageProductDependencies = (
-				D0C0A11728A5ADCD00132832 /* StyleFramework */,
+				D0E0BB0928B0014900D3A434 /* ResourcesFramework */,
 			);
 			productName = ExampleUI;
 			productReference = D0C0A10528A5ADC100132832 /* ExampleUI.app */;
@@ -354,9 +354,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D0C0A11728A5ADCD00132832 /* StyleFramework */ = {
+		D0E0BB0928B0014900D3A434 /* ResourcesFramework */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = StyleFramework;
+			productName = ResourcesFramework;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

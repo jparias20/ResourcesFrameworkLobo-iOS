@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import StyleFramework
+import ResourcesFramework
 
 struct ContentView: View {
     var body: some View {
