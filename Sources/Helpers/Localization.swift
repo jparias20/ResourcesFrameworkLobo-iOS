@@ -7,6 +7,12 @@ public enum LanguageString: String {
     case logIn
     case loginDifferentMethods
     case loginFooterDescription
+    case errorTitle
+    case errorEmailEmptyDescription
+    case errorInvalidEmailDescription
+    case errorPasswordEmptyDescription
+    case errorWrongPasswordDescription
+    case errorUnknownTitleDescription
     
     public var localized: String {
         return localize()
