@@ -4,3 +4,11 @@
 "logIn" = "Iniciar Sesion";
 "loginDifferentMethods" = "-- Ó --";
 "loginFooterDescription" = "Si no tienes cuenta, se creará una nueva";
+
+"errorTitle" = "Upps";
+
+"errorEmailEmptyDescription" = "Un correo es requerido, por favor ingrese uno ";
+"errorInvalidEmailDescription" = "Este correo no es válido, por favor ingrese uno bueno ";
+"errorPasswordEmptyDescription" = "Una contraseña es requerida, por favor ingrese una";
+"errorWrongPasswordDescription" = "Esta contraseña no es correcta, por favor ingrese una buena";
+"errorUnknownTitleDescription" = "Ocurrió un error desconocido, por favor inténtalo de nuevo";

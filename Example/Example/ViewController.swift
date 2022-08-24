@@ -23,6 +23,19 @@ class ViewController: UIViewController {
         imageView2.tintColor = Colors.baseTitle1ForegroundColor.uiColor
         
         print(LanguageString.emailPlaceholder.localized)
+        
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            let loadingView = UILoadingView.show(in: self.view)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                DispatchQueue.main.async {
+                    loadingView.remove()
+                }
+            }
+        }
+        
+        
     }
 
 

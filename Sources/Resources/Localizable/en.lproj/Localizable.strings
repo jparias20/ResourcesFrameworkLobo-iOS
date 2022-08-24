@@ -4,3 +4,11 @@
 "logIn" = "Log in";
 "loginDifferentMethods" = "-- Or --";
 "loginFooterDescription" = "If you don't have any accounts, a new one will be created";
+
+"errorTitle" = "Upps";
+
+"errorEmailEmptyDescription" = "An email is required, please enter one";
+"errorInvalidEmailDescription" = "This email is not valid, please enter a good one";
+"errorPasswordEmptyDescription" = "A password is required, please enter one";
+"errorWrongPasswordDescription" = "This password is not correct, please enter a good one";
+"errorUnknownTitleDescription" = "Unknown error happened, try again please";
