@@ -16,7 +16,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/airbnb/lottie-ios.git", from: "3.4.2"),
-        .package(url: "https://github.com/dotlottie/dotlottie-ios.git", from: "0.1.9")
+        .package(url: "https://github.com/dotlottie/dotlottie-ios.git", from: "0.1.7")
     ],
     targets: [
         .target(

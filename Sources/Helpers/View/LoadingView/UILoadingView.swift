@@ -1,18 +1,6 @@
 import UIKit
 import Lottie
 import dotLottie
-import SwiftUI
-
-public struct LoadingView: UIViewRepresentable {
-    
-    public init() { }
-    
-    public func makeUIView(context: Context) -> UILoadingView {
-        UILoadingView()
-    }
-    
-    public func updateUIView(_ uiView: UILoadingView, context: Context) {}
-}
 
 public final class UILoadingView: UIView {
     
@@ -62,7 +50,7 @@ public final class UILoadingView: UIView {
         ])
         
         DotLottie.isLogEnabled = true
-        guard let url = URL(string:"https://assets1.lottiefiles.com/dotlotties/dlf10_8qDRX7nBln.lottie") else { return }
+        guard let url = URL(string: Constans.regularLottieURLString) else { return }
         
         DotLottie.load(from: url) { [weak self] animation, _ in
             guard let self = self, let animation = animation else { return }

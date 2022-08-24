@@ -9,6 +9,7 @@ import SwiftUI
 import ResourcesFramework
 
 struct ContentView: View {
+    
     var body: some View {
         ZStack {
             
@@ -34,7 +35,6 @@ struct ContentView: View {
             }
             
             LoadingView()
-                .ignoresSafeArea()
         }
         
     }
