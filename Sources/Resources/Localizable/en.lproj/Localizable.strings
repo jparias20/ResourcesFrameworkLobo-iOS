@@ -12,3 +12,4 @@
 "errorPasswordEmptyDescription" = "A password is required, please enter one";
 "errorWrongPasswordDescription" = "This password is not correct, please enter a good one";
 "errorUnknownTitleDescription" = "Unknown error happened, try again please";
+"errorWeakPasswordDrescription" = "Password is not secure, please try a new one";

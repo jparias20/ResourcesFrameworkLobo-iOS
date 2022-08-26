@@ -13,6 +13,7 @@ public enum LanguageString: String {
     case errorPasswordEmptyDescription
     case errorWrongPasswordDescription
     case errorUnknownTitleDescription
+    case errorWeakPasswordDrescription
     
     public var localized: String {
         return localize()
