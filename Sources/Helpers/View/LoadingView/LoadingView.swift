@@ -7,7 +7,7 @@ public struct LoadingView: View {
     
     public var body: some View {
         ZStack {
-            Color.black.opacity(0.1)
+            Colors.modalBackgroundColor.color
             Loading()
         }
         .background {
@@ -18,7 +18,7 @@ public struct LoadingView: View {
     
     @ViewBuilder
     func Loading() -> some View {
-        if let url = URL(string: Constans.regularLottieURLString) {
+        if let url = URL(string: Constants.regularLottieURLString) {
             
             DotLottieView(url: url, autoPlay: true, loopMode: .loop, play: .constant(1))
                 .frame(height: 250)

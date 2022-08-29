@@ -25,10 +25,10 @@ class ViewController: UIViewController {
         print(LanguageString.emailPlaceholder.localized)
         
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             let loadingView = UILoadingView.show(in: self.view)
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
                 DispatchQueue.main.async {
                     loadingView.remove()
                 }

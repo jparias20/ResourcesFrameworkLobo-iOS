@@ -18,7 +18,10 @@ public final class UILoadingView: UIView {
             loadingView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
         
-        UIView.animate(withDuration: 0.3, delay: 0.2, options: .curveEaseInOut, animations: { [weak loadingView] in
+        UIView.animate(withDuration: 0.3,
+                       delay: 0.2,
+                       options: .curveEaseInOut,
+                       animations: { [weak loadingView] in
             loadingView?.alpha = 1
         }, completion: nil)
                 
@@ -36,21 +39,21 @@ public final class UILoadingView: UIView {
     
     func configure() {
         
-        let blurEffect = UIBlurEffect(style: .dark)
-        let blurView = UIVisualEffectView(effect: blurEffect)
-        blurView.translatesAutoresizingMaskIntoConstraints = false
+        let backgroundView = UIView()
+        backgroundView.translatesAutoresizingMaskIntoConstraints = false
+        backgroundView.backgroundColor = Colors.modalBackgroundColor.uiColor
         
-        insertSubview(blurView, at: 0)
+        insertSubview(backgroundView, at: 0)
         
         NSLayoutConstraint.activate([
-            blurView.topAnchor.constraint(equalTo: topAnchor),
-            blurView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            blurView.heightAnchor.constraint(equalTo: heightAnchor),
-            blurView.widthAnchor.constraint(equalTo: widthAnchor)
+            backgroundView.topAnchor.constraint(equalTo: topAnchor),
+            backgroundView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            backgroundView.heightAnchor.constraint(equalTo: heightAnchor),
+            backgroundView.widthAnchor.constraint(equalTo: widthAnchor)
         ])
         
         DotLottie.isLogEnabled = true
-        guard let url = URL(string: Constans.regularLottieURLString) else { return }
+        guard let url = URL(string: Constants.regularLottieURLString) else { return }
         
         DotLottie.load(from: url) { [weak self] animation, _ in
             guard let self = self, let animation = animation else { return }
@@ -67,7 +70,10 @@ public final class UILoadingView: UIView {
     }
     
     public func remove() {
-        UIView.animate(withDuration: 0.2, delay: 0.2, options: .curveEaseInOut, animations: { [weak self] in
+        UIView.animate(withDuration: 0.2,
+                       delay: 0.2,
+                       options: .curveEaseInOut,
+                       animations: { [weak self] in
             self?.alpha = 0
         }, completion: { [weak self] _ in
             self?.removeFromSuperview()

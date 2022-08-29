@@ -13,6 +13,9 @@ public enum Colors: String {
     case facebookButtonBackgroundColor
     case googleButtonBackgroundColor
     
+    case modalBackgroundColor
+    case modalShadowColor
+    
     case rejectButtonBackgroundColor
     case rejectButtonForegroundColor
     
