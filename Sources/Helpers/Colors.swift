@@ -4,14 +4,21 @@ import SwiftUI
 public enum Colors: String {
     
     case baseBackgroundColor
-    case baseButtonSubmitBackgroundColor
-    case baseTextViewBackgroundColor
+    
     case baseTitle1ForegroundColor
     case baseTitle2ForegroundColor
     
+    case divideLineBackgroundColor
+    
     case facebookButtonBackgroundColor
     case googleButtonBackgroundColor
-        
+    
+    case rejectButtonBackgroundColor
+    case rejectButtonForegroundColor
+    
+    case submitButtonBackgroundColor
+    case submitButtonForegroundColor
+    
     public var uiColor: UIColor {
         .getColor(named: rawValue)
     }

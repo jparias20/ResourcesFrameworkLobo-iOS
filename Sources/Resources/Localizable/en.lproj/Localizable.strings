@@ -1,3 +1,6 @@
+"send" = "Send";
+"reject" = "Refuse";
+
 "emailPlaceholder" = "Enter your email";
 "passwordPlaceholder" = "Enter your password";
 "forgotPassword" = "Forgot your password?";
@@ -13,3 +16,8 @@
 "errorWrongPasswordDescription" = "This password is not correct, please enter a good one";
 "errorUnknownTitleDescription" = "Unknown error happened, try again please";
 "errorWeakPasswordDrescription" = "Password is not secure, please try a new one";
+
+"registerNameModalTitle" = "User Name";
+"registerNameModalDescription" = "A user name is required in order to be visible againts other users";
+"registerNameModalPlaceholder" = "Enter an user name";
+"registerNameModalEmptyDescription" = "A user name is required, please enter one";

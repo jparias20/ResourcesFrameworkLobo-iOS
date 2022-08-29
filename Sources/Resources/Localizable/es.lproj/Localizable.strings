@@ -1,3 +1,6 @@
+"send" = "Enviar";
+"reject" = "Cancelar";
+
 "emailPlaceholder" = "Ingresa tu correo";
 "passwordPlaceholder" = "Ingresa tu contraseña";
 "forgotPassword" = "Olvidaste tu contraseña?";
@@ -13,3 +16,8 @@
 "errorWrongPasswordDescription" = "Esta contraseña no es correcta, por favor ingrese una buena";
 "errorUnknownTitleDescription" = "Ocurrió un error desconocido, por favor inténtalo de nuevo";
 "errorWeakPasswordDrescription" = "La contraseña no es segura, por favor intente con una mas segura";
+
+"registerNameModalTitle" = "Nombre de usuario";
+"registerNameModalDescription" = "Un nombre de usuario es requerido para poder ser visible frente a los otros usuarios";
+"registerNameModalPlaceholder" = "Ingrese un nombre de usuario";
+"registerNameModalEmptyDescription" = "Un nombre de usuario es requerido, por favor ingrese uno";

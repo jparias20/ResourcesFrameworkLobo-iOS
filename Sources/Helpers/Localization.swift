@@ -1,19 +1,29 @@
 import Foundation
 
 public enum LanguageString: String {
+    case send
+    case reject
+    
     case emailPlaceholder
     case passwordPlaceholder
     case forgotPassword
     case logIn
     case loginDifferentMethods
     case loginFooterDescription
+    
     case errorTitle
+    
     case errorEmailEmptyDescription
     case errorInvalidEmailDescription
     case errorPasswordEmptyDescription
     case errorWrongPasswordDescription
     case errorUnknownTitleDescription
     case errorWeakPasswordDrescription
+    
+    case registerNameModalTitle
+    case registerNameModalDescription
+    case registerNameModalPlaceholder
+    case registerNameModalEmptyDescription
     
     public var localized: String {
         return localize()
