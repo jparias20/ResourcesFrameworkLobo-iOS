@@ -4,6 +4,7 @@ import SwiftUI
 public enum Colors: String {
     
     case baseBackgroundColor
+    case baseTextViewBackgroundColor
     
     case baseTitle1ForegroundColor
     case baseTitle2ForegroundColor
