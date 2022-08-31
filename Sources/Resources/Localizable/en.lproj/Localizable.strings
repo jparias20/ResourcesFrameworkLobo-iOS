@@ -21,3 +21,8 @@
 "registerNameModalDescription" = "A user name is required in order to be visible againts other users";
 "registerNameModalPlaceholder" = "Enter an user name";
 "registerNameModalEmptyDescription" = "A user name is required, please enter one";
+
+"joinARoomButton" = "Join a room";
+"createARoomButton" = "Create a room";
+
+"logout" = "LogOut";
