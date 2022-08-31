@@ -25,8 +25,8 @@ public enum LanguageString: String {
     case registerNameModalPlaceholder
     case registerNameModalEmptyDescription
     
-    case joinARoomButton
-    case createARoomButton
+    case joinARoom
+    case createARoom
     
     case logout
     

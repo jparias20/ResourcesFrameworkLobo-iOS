@@ -22,7 +22,7 @@
 "registerNameModalPlaceholder" = "Ingrese un nombre de usuario";
 "registerNameModalEmptyDescription" = "Un nombre de usuario es requerido, por favor ingrese uno";
 
-"joinARoomButton" = "Unirse a una sala";
-"createARoomButton" = "Crear una sala";
+"joinARoom" = "Unirse a una sala";
+"createARoom" = "Crear una sala";
 
 "logout" = "Cerrar Sesión";
