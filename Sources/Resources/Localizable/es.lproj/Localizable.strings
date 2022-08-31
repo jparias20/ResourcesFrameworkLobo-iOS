@@ -21,3 +21,8 @@
 "registerNameModalDescription" = "Un nombre de usuario es requerido para poder ser visible frente a los otros usuarios";
 "registerNameModalPlaceholder" = "Ingrese un nombre de usuario";
 "registerNameModalEmptyDescription" = "Un nombre de usuario es requerido, por favor ingrese uno";
+
+"joinARoom" = "Unirse a una sala";
+"createARoom" = "Crear una sala";
+
+"logout" = "Cerrar Sesión";

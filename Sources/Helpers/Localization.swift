@@ -25,6 +25,11 @@ public enum LanguageString: String {
     case registerNameModalPlaceholder
     case registerNameModalEmptyDescription
     
+    case joinARoom
+    case createARoom
+    
+    case logout
+    
     public var localized: String {
         return localize()
     }
