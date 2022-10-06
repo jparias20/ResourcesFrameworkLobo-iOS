@@ -7,9 +7,9 @@ fileprivate extension View {
     }
 }
 
-struct RegularButtonView: View {
+public struct RegularButtonView: View {
     
-    enum Theme {
+    public enum Theme {
         case accept
         case reject
         
@@ -36,16 +36,16 @@ struct RegularButtonView: View {
     private let callback: CompletionBlock
     private let theme: Theme
     
-    init(title: LanguageString,
-         theme: Theme = .accept,
-         callback: @escaping CompletionBlock) {
+    public init(title: LanguageString,
+                theme: Theme = .accept,
+                callback: @escaping CompletionBlock) {
         
         self.title = title
         self.theme = theme
         self.callback = callback
     }
     
-    var body: some View {
+    public var body: some View {
         Button {
             hideKeyboard()
             callback()
