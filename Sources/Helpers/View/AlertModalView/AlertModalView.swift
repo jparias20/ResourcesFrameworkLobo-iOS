@@ -29,7 +29,7 @@ public struct AlertModalModel {
         description: LanguageString,
         forms: [RegularTextFieldView.Model],
         primaryAction: Action,
-        secondaryAction: Action?
+        secondaryAction: Action? = nil
     ) {
         self.title = title
         self.description = description
@@ -129,9 +129,9 @@ struct AlertModalView_Previews: PreviewProvider {
                         title: .registerNameModalTitle,
                         description: .registerNameModalDescription,
                         forms: [
-                            .init(placeHolder: .registerNameModalPlaceholder, inputText: .constant("")),
-                            .init(placeHolder: .registerNameModalPlaceholder, inputText: .constant("")),
-                            .init(placeHolder: .registerNameModalPlaceholder, inputText: .constant(""))
+                            .init(placeHolder: .registerNameModalPlaceholder, completion: { _ in }),
+                            .init(placeHolder: .registerNameModalPlaceholder, completion: { _ in }),
+                            .init(placeHolder: .registerNameModalPlaceholder, completion: { _ in })
                         ],
                         primaryAction: .init(
                             title: .send,

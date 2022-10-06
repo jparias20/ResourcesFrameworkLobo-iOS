@@ -8,23 +8,22 @@ public struct RegularTextFieldView: View {
         let placeHolder: LanguageString
         let textContentType: UITextContentType
         let keyboardType: UIKeyboardType
-        
-        @Binding
-        var inputText: String
+        let completion: TextFieldCompletionBlock
         
         public init(leftIcon: Image? = Images.email.image,
                     rightIcon: Image? = nil,
                     textContentType: UITextContentType = .emailAddress,
                     keyboardType: UIKeyboardType = .emailAddress,
                     placeHolder: LanguageString,
-                    inputText: Binding<String>) {
+                    completion: @escaping TextFieldCompletionBlock) {
             
             self.leftIcon = leftIcon
             self.rightIcon = rightIcon
             self.textContentType = textContentType
             self.keyboardType = keyboardType
             self.placeHolder = placeHolder
-            self._inputText = inputText
+            self.completion = completion
+ 
         }
         
         public static func == (lhs: RegularTextFieldView.Model, rhs: RegularTextFieldView.Model) -> Bool {
@@ -36,8 +35,10 @@ public struct RegularTextFieldView: View {
         }
     }
     
+    private let model: Model
+    
     @State
-    private var model: Model
+    private var inputText: String = ""
     
     public init(with model: Model) {
         self.model = model
@@ -51,8 +52,8 @@ public struct RegularTextFieldView: View {
                     .foregroundColor(Colors.baseTitle1ForegroundColor.color)
             }
             
-            TextField("", text: model.$inputText)
-                .placeholder(when: model.inputText.isEmpty) {
+            TextField("", text: $inputText)
+                .placeholder(when: inputText.isEmpty) {
                     Text(model.placeHolder.localized).foregroundColor(Colors.baseTitle2ForegroundColor.color)
                 }
                 .foregroundColor(Colors.baseTitle1ForegroundColor.color)
@@ -61,6 +62,9 @@ public struct RegularTextFieldView: View {
                 .autocapitalization(.none)
                 .submitLabel(.done)
                 .disableAutocorrection(true)
+                .onChange(of: inputText) {
+                    model.completion($0)
+                }
             
             if let rightIcon = model.rightIcon {
                 rightIcon
@@ -78,10 +82,12 @@ public struct RegularTextFieldView: View {
 
 struct RegularTextFieldView_Previews: PreviewProvider {
     static var previews: some View {
-        let model = RegularTextFieldView.Model(leftIcon: Images.email.image,
-                                               rightIcon: Images.email.image,
-                                               placeHolder: LanguageString.emailPlaceholder,
-                                               inputText: .constant(""))
+        let model = RegularTextFieldView.Model(
+            leftIcon: Images.email.image,
+            rightIcon: Images.email.image,
+            placeHolder: LanguageString.emailPlaceholder,
+            completion: { _ in }
+        )
         RegularTextFieldView(with: model)
             .previewLayout(.fixed(width: 320, height: 100))
     }

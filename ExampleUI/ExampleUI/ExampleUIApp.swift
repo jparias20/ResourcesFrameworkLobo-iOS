@@ -11,7 +11,7 @@ import SwiftUI
 struct ExampleUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(informationView: .constant(.loadingView))
+            ContentView()
         }
     }
 }
