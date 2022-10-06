@@ -54,16 +54,10 @@ struct ErrorView: View {
     }
     
     var body: some View {
-        ZStack {
-            Colors.modalBackgroundColor.color
-                .edgesIgnoringSafeArea(.all)
-            
+        baseBackgroundView(Colors.modalBackgroundColor.color) {
             VStack(spacing: 30) {
                 
-                Images.errorIcon.image
-                    .resizable()
-                    .frame(width: 100, height: 100)
-                    .padding(.top, 30)
+                HeaderImageView(icon: .errorIcon)
                 
                 Text(error.errorDescription)
                     .foregroundColor(Colors.baseTitle1ForegroundColor.color)

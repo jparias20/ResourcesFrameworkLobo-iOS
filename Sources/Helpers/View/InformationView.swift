@@ -3,6 +3,14 @@ import SwiftUI
 public enum InformationViewRenderMode {
     case loadingView
     case errorView(ErrorType)
+    case alertModal(AlertModalModel)
+}
+
+extension View {
+    
+    public func informationView(renderMode: Binding<InformationViewRenderMode?>) -> some View {
+        modifier(InformationView(renderMode: renderMode))
+    }
 }
 
 struct InformationView: ViewModifier {
@@ -17,6 +25,9 @@ struct InformationView: ViewModifier {
                 LoadingView()
             case .errorView(let error):
                 showErroView(content: content, with: error)
+                
+            case .alertModal(let model):
+                AlertModalView(model: model)
             }
         } else {
             content
@@ -36,18 +47,5 @@ private extension InformationView {
                     }
                 }
         }
-    }
-}
-
-struct ShakeEffect: GeometryEffect {
-    func effectValue(size: CGSize) -> ProjectionTransform {
-        print(position)
-        return ProjectionTransform(CGAffineTransform(translationX: position, y: 0))
-    }
-    
-    var position: CGFloat
-    var animatableData: CGFloat {
-        get { position }
-        set { position = newValue }
     }
 }

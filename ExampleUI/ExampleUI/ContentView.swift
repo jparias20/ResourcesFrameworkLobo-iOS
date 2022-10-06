@@ -21,7 +21,6 @@ struct ContentView: View {
             LoadingView()
         }
         .informationView(renderMode: $informationView)
-        
     }
 }
 
@@ -30,5 +29,26 @@ struct ContentView_Previews: PreviewProvider {
         ContentView(informationView: .constant(.errorView(.emailEmpty)))
         
         ContentView(informationView: .constant(.loadingView))
+        
+        let model = AlertModalModel(
+            title: .registerNameModalTitle,
+            description: .registerNameModalDescription,
+            forms: [
+                .init(placeHolder: .registerNameModalPlaceholder, inputText: .constant("")),
+                .init(placeHolder: .registerNameModalPlaceholder, inputText: .constant("")),
+                .init(placeHolder: .registerNameModalPlaceholder, inputText: .constant(""))
+            ],
+            primaryAction: .init(
+                title: .send,
+                callBack: {},
+                theme: .accept
+            ),
+            secondaryAction: .init(
+                title: .close,
+                callBack: {},
+                theme: .reject
+            )
+        )
+        ContentView(informationView: .constant(.alertModal(model)))
     }
 }

@@ -8,6 +8,7 @@ public enum Images: String {
     case visible = "eye"
     case invisible = "eye.slash"
     case errorIcon
+    case formIcon
     
     case facebook
     case google
