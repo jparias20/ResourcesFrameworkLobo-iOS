@@ -18,16 +18,36 @@ public struct AlertModalModel {
         }
     }
     
+    public struct Form: Hashable {
+        public let model: RegularTextFieldView.Model
+        
+        @Binding
+        public var input: String
+        
+        public init(model: RegularTextFieldView.Model, input: Binding<String>) {
+            self.model = model
+            self._input = input
+        }
+        
+        public static func == (lhs: Form, rhs: Form) -> Bool {
+            lhs.model == rhs.model
+        }
+        
+        public func hash(into hasher: inout Hasher) {
+            return hasher.combine(model)
+        }
+    }
+    
     public let title: LanguageString
     public let description: LanguageString
-    public let forms: [RegularTextFieldView.Model]
+    public let forms: [Form]
     public let primaryAction: Action
     public let secondaryAction: Action?
     
     public init(
         title: LanguageString,
         description: LanguageString,
-        forms: [RegularTextFieldView.Model],
+        forms: [Form],
         primaryAction: Action,
         secondaryAction: Action? = nil
     ) {
@@ -93,7 +113,7 @@ private extension AlertModalView {
     var formViews: some View {
         VStack(spacing: 10) {
             ForEach(model.forms, id: \.self) { model in
-                RegularTextFieldView(with: model)
+                RegularTextFieldView(with: model.model, inputText: model.$input)
                     .padding(.horizontal, horizontalPadding)
             }
         }
@@ -129,9 +149,9 @@ struct AlertModalView_Previews: PreviewProvider {
                         title: .registerNameModalTitle,
                         description: .registerNameModalDescription,
                         forms: [
-                            .init(placeHolder: .registerNameModalPlaceholder, completion: { _ in }),
-                            .init(placeHolder: .registerNameModalPlaceholder, completion: { _ in }),
-                            .init(placeHolder: .registerNameModalPlaceholder, completion: { _ in })
+                            AlertModalModel.Form(
+                                model: RegularTextFieldView.Model(placeHolder: .registerNameModalPlaceholder),
+                                input: .constant(""))
                         ],
                         primaryAction: .init(
                             title: .send,

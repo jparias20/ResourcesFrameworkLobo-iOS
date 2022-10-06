@@ -2,7 +2,6 @@ import Foundation
 import UIKit
 
 public typealias CompletionBlock = () -> Void
-public typealias TextFieldCompletionBlock = (String) -> Void
 
 public struct Constants {
     

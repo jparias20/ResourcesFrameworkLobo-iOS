@@ -11,6 +11,9 @@ import ResourcesFramework
 struct ContentView: View {
     
     @State
+    var requestedName: String = ""
+    
+    @State
     var informationView: InformationViewRenderMode? = nil
     
     var body: some View {
@@ -50,11 +53,10 @@ struct ContentView: View {
     @ViewBuilder
     var requestNameModalButton: some View {
         Button {
-            
-            var requestedName: String = ""
-            let form: RegularTextFieldView.Model = .init(placeHolder: .registerNameModalPlaceholder) {
-                requestedName = $0
-            }
+            let form = AlertModalModel.Form(
+                model: RegularTextFieldView.Model(placeHolder: .registerNameModalPlaceholder),
+                input: $requestedName
+            )
             
             let model = AlertModalModel(
                 title: .registerNameModalTitle,
@@ -86,9 +88,7 @@ struct ContentView_Previews: PreviewProvider {
             title: .registerNameModalTitle,
             description: .registerNameModalDescription,
             forms: [
-                .init(placeHolder: .registerNameModalPlaceholder, completion: { _ in }),
-                .init(placeHolder: .registerNameModalPlaceholder, completion: { _ in }),
-                .init(placeHolder: .registerNameModalPlaceholder, completion: { _ in }),
+                .init(model: .init(placeHolder: .registerNameModalPlaceholder), input: .constant(""))
             ],
             primaryAction: .init(
                 title: .send,

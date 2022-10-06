@@ -8,22 +8,18 @@ public struct RegularTextFieldView: View {
         let placeHolder: LanguageString
         let textContentType: UITextContentType
         let keyboardType: UIKeyboardType
-        let completion: TextFieldCompletionBlock
         
         public init(leftIcon: Image? = Images.email.image,
                     rightIcon: Image? = nil,
                     textContentType: UITextContentType = .emailAddress,
                     keyboardType: UIKeyboardType = .emailAddress,
-                    placeHolder: LanguageString,
-                    completion: @escaping TextFieldCompletionBlock) {
+                    placeHolder: LanguageString) {
             
             self.leftIcon = leftIcon
             self.rightIcon = rightIcon
             self.textContentType = textContentType
             self.keyboardType = keyboardType
             self.placeHolder = placeHolder
-            self.completion = completion
- 
         }
         
         public static func == (lhs: RegularTextFieldView.Model, rhs: RegularTextFieldView.Model) -> Bool {
@@ -37,11 +33,12 @@ public struct RegularTextFieldView: View {
     
     private let model: Model
     
-    @State
-    private var inputText: String = ""
+    @Binding
+    var inputText: String
     
-    public init(with model: Model) {
+    public init(with model: Model, inputText: Binding<String>) {
         self.model = model
+        self._inputText = inputText
     }
     
     public var body: some View {
@@ -62,9 +59,6 @@ public struct RegularTextFieldView: View {
                 .autocapitalization(.none)
                 .submitLabel(.done)
                 .disableAutocorrection(true)
-                .onChange(of: inputText) {
-                    model.completion($0)
-                }
             
             if let rightIcon = model.rightIcon {
                 rightIcon
@@ -85,10 +79,9 @@ struct RegularTextFieldView_Previews: PreviewProvider {
         let model = RegularTextFieldView.Model(
             leftIcon: Images.email.image,
             rightIcon: Images.email.image,
-            placeHolder: LanguageString.emailPlaceholder,
-            completion: { _ in }
+            placeHolder: LanguageString.emailPlaceholder
         )
-        RegularTextFieldView(with: model)
+        RegularTextFieldView(with: model, inputText: .constant(""))
             .previewLayout(.fixed(width: 320, height: 100))
     }
 }
