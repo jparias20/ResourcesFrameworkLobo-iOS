@@ -7,6 +7,7 @@ public enum Images: String {
     case password = "key"
     case visible = "eye"
     case invisible = "eye.slash"
+    case errorIcon
     
     case facebook
     case google

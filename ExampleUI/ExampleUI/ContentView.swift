@@ -10,38 +10,25 @@ import ResourcesFramework
 
 struct ContentView: View {
     
+    @Binding
+    var informationView: InformationViewRenderMode?
+    
     var body: some View {
         ZStack {
             
             Colors.baseBackgroundColor
                 .color.edgesIgnoringSafeArea(.all)
-            
-            
-            
-            VStack {
-                Images.loginHeaderIcon.image
-                    .resizable()
-                    .frame(width: 100, height: 100)
-                
-                Images.email.image
-                    .resizable()
-                    .frame(width: 100, height: 100)
-                    .foregroundColor(Colors.baseTitle1ForegroundColor.color)
-                
-                Images.password.image
-                    .resizable()
-                    .frame(width: 100, height: 100)
-                    .foregroundColor(.white)
-            }
-            
             LoadingView()
         }
+        .informationView(renderMode: $informationView)
         
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(informationView: .constant(.errorView(.emailEmpty)))
+        
+        ContentView(informationView: .constant(.loadingView))
     }
 }

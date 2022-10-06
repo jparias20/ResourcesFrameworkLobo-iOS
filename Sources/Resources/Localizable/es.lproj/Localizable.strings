@@ -8,7 +8,7 @@
 "loginDifferentMethods" = "-- Ó --";
 "loginFooterDescription" = "Si no tienes cuenta, se creará una nueva";
 
-"errorTitle" = "Upps";
+"errorTitle" = "Error";
 
 "errorEmailEmptyDescription" = "Un correo es requerido, por favor ingrese uno ";
 "errorInvalidEmailDescription" = "Este correo no es válido, por favor ingrese uno bueno ";
@@ -26,3 +26,5 @@
 "createARoom" = "Crear una sala";
 
 "logout" = "Cerrar Sesión";
+
+"close" = "Cerrar";

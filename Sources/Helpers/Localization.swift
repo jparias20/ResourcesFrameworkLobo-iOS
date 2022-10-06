@@ -30,6 +30,8 @@ public enum LanguageString: String {
     
     case logout
     
+    case close
+    
     public var localized: String {
         return localize()
     }

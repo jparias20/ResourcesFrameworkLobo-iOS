@@ -8,7 +8,7 @@
 "loginDifferentMethods" = "-- Or --";
 "loginFooterDescription" = "If you don't have any accounts, a new one will be created";
 
-"errorTitle" = "Upps";
+"errorTitle" = "Error";
 
 "errorEmailEmptyDescription" = "An email is required, please enter one";
 "errorInvalidEmailDescription" = "This email is not valid, please enter a good one";
@@ -26,3 +26,4 @@
 "createARoom" = "Create a room";
 
 "logout" = "LogOut";
+"close" = "Close";

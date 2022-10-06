@@ -1,6 +1,8 @@
 import Foundation
 import UIKit
 
+public typealias CompletionBlock = () -> Void
+
 public struct Constants {
     
     public static let regularHeight: CGFloat = 50
