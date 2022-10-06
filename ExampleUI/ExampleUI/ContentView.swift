@@ -40,13 +40,13 @@ struct ContentView_Previews: PreviewProvider {
             ],
             primaryAction: .init(
                 title: .send,
-                callBack: {},
-                theme: .accept
+                theme: .accept,
+                callBack: {}
             ),
             secondaryAction: .init(
                 title: .close,
-                callBack: {},
-                theme: .reject
+                theme: .reject,
+                callBack: {}
             )
         )
         ContentView(informationView: .constant(.alertModal(model)))

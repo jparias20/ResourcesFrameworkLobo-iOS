@@ -4,13 +4,13 @@ public struct AlertModalModel {
     
     public struct Action {
         public let title: LanguageString
-        public let callBack: CompletionBlock
         public let theme: RegularButtonView.Theme
+        public let callBack: CompletionBlock
         
         public init(
             title: LanguageString,
-            callBack: @escaping CompletionBlock,
-            theme: RegularButtonView.Theme
+            theme: RegularButtonView.Theme,
+            callBack: @escaping CompletionBlock
         ) {
             self.title = title
             self.callBack = callBack
@@ -135,13 +135,13 @@ struct AlertModalView_Previews: PreviewProvider {
                         ],
                         primaryAction: .init(
                             title: .send,
-                            callBack: {},
-                            theme: .accept
+                            theme: .accept,
+                            callBack: {}
                         ),
                         secondaryAction: .init(
                             title: .close,
-                            callBack: {},
-                            theme: .reject
+                            theme: .reject,
+                            callBack: {}
                         )
                     )
         )
