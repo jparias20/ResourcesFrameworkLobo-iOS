@@ -2,7 +2,7 @@ import SwiftUI
 
 public enum InformationViewRenderMode {
     case loadingView
-    case errorView(ErrorType)
+    case errorView(ErrorType, onAction: CompletionBlock?)
     case alertModal(AlertModalModel)
 }
 
@@ -23,8 +23,8 @@ struct InformationView: ViewModifier {
             switch renderMode {
             case .loadingView:
                 LoadingView()
-            case .errorView(let error):
-                showErroView(content: content, with: error)
+            case .errorView(let error, let onAction):
+                showErroView(content: content, with: error, onAction: onAction)
                 
             case .alertModal(let model):
                 AlertModalView(model: model)
@@ -38,12 +38,13 @@ struct InformationView: ViewModifier {
 private extension InformationView {
     
     @ViewBuilder
-    func showErroView(content: Content, with error: ErrorType) -> some View {
+    func showErroView(content: Content, with error: ErrorType, onAction: CompletionBlock?) -> some View {
         ZStack {
             content
                 .overlay {
                     ErrorView(error: error) {
                         renderMode = nil
+                        onAction?()
                     }
                 }
         }

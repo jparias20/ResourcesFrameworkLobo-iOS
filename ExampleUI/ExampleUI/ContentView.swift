@@ -43,7 +43,9 @@ struct ContentView: View {
     @ViewBuilder
     var errorButton: some View {
         Button {
-            informationView = .errorView(.emailEmpty)
+            informationView = .errorView(.emailEmpty) {
+                print("Closed")
+            }
 
         } label: {
             Text("Show Error view")
@@ -80,7 +82,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(informationView: .errorView(.emailEmpty))
+        ContentView(informationView: .errorView(.emailEmpty, onAction: nil))
         
         ContentView(informationView: .loadingView)
         
